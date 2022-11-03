@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+/**, *::before, *::after {*/
+/*    box-sizing: inherit;*/
+/*}*/
+:root {
+    --main-white: #f0f0f0;
+    --main-dark-blue: #051257;
+    --main-blue: #45567d;
+    --main-gray: gray;
+    --main-sweet-blue: #5da6b9;
+    --main-red: #be3144;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+    /*background-color:var(--main-blue);*/
+    width: 100%;
+    color: var(--main-white);
+    /*background: linear-gradient( 45deg,var(--main-blue), var(--main-sweet-blue));*/
+    /*background: var(--main-blue);*/
+    background: linear-gradient(180deg, var(--main-dark-blue),var(--main-blue));
+
+}
+header{
+    /*background-color:var(--main-dark-blue);*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*min-height: 15%;*/
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*height: 20rem;*/
+}
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: var(--main-sweet-blue);*/
+    background: linear-gradient(180deg,var(--main-blue), var(--main-sweet-blue));
+
+    z-index: 10;
+    /*padding: 1rem;*/
+
+}
+nav > ul {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+
+}
+li{
+    list-style: none;
+    padding: 1rem;
+}
+main{
+    /*margin: 1% ;*/
+    width: 100%;
+
+}
+.welcome-section{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1{
+
+    font-size: 6rem;
+
+}
+
+
+.welcome-section > p {
+    font-size: 3rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-sweet-blue);
+text-align: center;
+
+}
+a {
+    text-decoration: none;
+    color: var(--main-white);
+}
+.nav-link{
+    font-size: 2rem;
+}
+.projects-section {
+    text-align: center;
+    padding: 5rem 2rem;
+    background: var(--main-blue);
+
+}
+.project {
+    background: var(--main-dark-blue);
+    box-shadow: 1px 1px 2px rgb(0 0 0 / 50%);
+    border-radius: 2px;
+}
+.project-title {
+    font-size: 2rem;
+    padding: 2rem 0.5rem;
+    background-color: var(--main-dark-blue);
+}
+h2{
+
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.code {
+    color: var(--main-gray);
+    transition: color 0.3s ease-out;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 4rem;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-bottom: 6rem;
+}
+.project-image {
+    height: calc(100% - 1rem);
+    width: 100%;
+    /*object-fit: cover;*/
+}
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 80vh;
+    padding: 0 2rem;
+    /*background: var(--main-blue);*/
+    background: linear-gradient(180deg,var(--main-blue), var(--main-dark-blue));
+
+}
+.contact-section-header h2{
+    font-size: 6rem;
+}
+.contact-links {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+.contact-details {
+    font-size: 2rem;
+    text-shadow: var(--main-sweet-blue);
+    transition: transform 0.3s ease-out;
+}
+.contact-details:hover {
+    transform: translateY(8px);
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    border-radius: 2px;
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem;
+    /*background: var(--main-dark-blue);*/
+    border-top: 4px solid var(--main-sweet-blue);
+    background: linear-gradient(180deg, var(--main-sweet-blue),var(--main-blue));
+
+}
+footer > p {
+    margin: 2rem;
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+@media (max-width: 780px) {
+    nav > ul {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: right;
+    }
+
+
+    nav li {
+        padding-bottom: 5px;
+    }
+    .btn {
+        display: flex;
+        padding: 1rem 2rem;
+        border-radius: 2px;
+    }
+}
